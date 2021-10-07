@@ -1,0 +1,87 @@
+.example-card {
+    max-width: 400px;
+    min-width: 180px;
+   
+    color: white;
+    background-color: rgb(35, 35, 35);
+    display: inline-block;
+
+  }
+  
+  .example-header-image {
+    
+    background-size: cover;
+  }
+
+  .content {
+    padding: 16px;
+}
+
+ mat-card {
+    width: 200px;
+}
+
+.column-label {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.card-deck-container {
+  width: 100%;
+    max-width: 1631px;
+    position: relative;
+    border-radius: 2px;
+    padding: 10px 10px 30px;
+    margin: 15px 15px 15px 15px;
+    background-color: darkcyan;
+
+}
+
+.card-item {
+  padding: 3px 3px 3px 3px;
+  display: inline-flex;
+  margin: 10px;
+
+}
+
+.example-form-field {
+  width: 340px;
+  margin-left: 259px;
+}
+
+.filter-section{
+  background-color: darkcyan;
+    margin-top: 24px;
+}
+
+.sort-section{
+  margin-left: 88px;
+}
+
+.subtitlestyle{
+  font-size: large;
+    font-family: serif;
+   
+    color: floralwhite;
+}
+
+.cardtitlestyle{
+  font-size: x-large;
+    font-family: serif;
+    font-weight: bolder;
+    color: floralwhite;
+}
+
+.contentheadingstyle{
+  font-size: large;
+    font-family: serif;
+    font-weight: bolder;
+    color: floralwhite;
+}
+
+.cardcontentstyle{
+  font-size: large;
+    font-family: serif;
+   
+    color: floralwhite;
+}

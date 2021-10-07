@@ -1,0 +1,41 @@
+.example-form-field {
+    width: 340px;
+    margin-left: 259px;
+  }
+
+  .pokemonlogo{
+      height: 53px;
+  }
+
+  .example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    margin-left: 100px;
+    margin-top:16px;
+  }
+
+  .dropdown-section{
+    display: flex;
+    margin-left:100px
+  }
+
+  .sorting-section{
+    display: inline-flex;
+  }
