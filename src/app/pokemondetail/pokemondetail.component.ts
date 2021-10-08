@@ -23,19 +23,12 @@ pokemonforms = 'Forms'
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if(id){
       this.getPokemondetailsbyid(id);
-    } 
-   /* this.route.params.subscribe((params) => {
-      this.id = params?.id;
-      this.getPokemondetailsbyid(this.id);
-  })*/
-    
+    }   
   }
 
   getPokemondetailsbyid(id:number) {
     this.pokemonservice.getPokemonDetailsById(id).subscribe(res=>{
-      console.log(res)
-  this.pokemon= res;
-   
+       this.pokemon= res;
    })
   }
 

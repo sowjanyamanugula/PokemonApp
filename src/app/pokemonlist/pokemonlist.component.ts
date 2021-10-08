@@ -17,7 +17,6 @@ export class PokemonlistComponent implements OnInit,AfterViewInit {
   pageSlice:any;
   SortbyParam = '';
   SortDirection = 'asc';
-
   SearchValue = '';
   SearchField = '';
   query: string | undefined;
@@ -29,6 +28,7 @@ export class PokemonlistComponent implements OnInit,AfterViewInit {
   constructor(private pokemonservice:PokemonserviceService, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    //getting the pokemon list from the service
       this.pokemonservice.getPokemonList().subscribe(data =>{
         this.pokemons = data;
          this.list= this.pokemons.results;
@@ -47,20 +47,18 @@ export class PokemonlistComponent implements OnInit,AfterViewInit {
           });
         }
       })
-
-
   }
+
   getPokemonDetails(pokemon: Results) {
+    //to get the pokemon details by name
     this.pokemonservice.getPokemonDetails(pokemon.name).subscribe(res=>{
-       pokemon.details=res;
-this.pokemonimg= pokemon.details.sprites.front_default;
-      // console.log(pokemon.details)
+    pokemon.details=res;
+    this.pokemonimg= pokemon.details.sprites.front_default;
     })
   }
 
   onChangePage(pe:PageEvent) {
-    //console.log(pe.pageIndex);
-    //console.log(pe.pageSize);
+    //for pagination
     const startIndex=pe.pageIndex * pe.pageSize;
     let endIndex= startIndex + pe.pageSize;
     if(endIndex > this.list.length){
@@ -70,11 +68,11 @@ this.pokemonimg= pokemon.details.sprites.front_default;
   } 
 
   ngAfterViewInit() {
-    
     this.list.paginator = this.paginator;
   }    
 
   onSortDirection() {
+    //sorting 
     if (this.SortDirection === 'desc') {
       this.SortDirection = 'asc';
     } else {
@@ -83,10 +81,12 @@ this.pokemonimg= pokemon.details.sprites.front_default;
   }
 
   onSearchFilter() {
+    //search functionality
     this.SearchField = this.SearchValue;
   }
 
   onSearchFilterClear() {
+    //clearing the search field
     this.SearchField = '';
     this.SearchValue = '';
   }

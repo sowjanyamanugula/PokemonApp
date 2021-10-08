@@ -11,10 +11,12 @@ export class SortPipe implements PipeTransform {
     let multiplier = 1;
 
     if (sortDirection === 'desc') {
+      // to sort in descending order
       multiplier = -1;
     }
 
     value.sort((a:any , b:any) : any=> {
+      //sorting by name 
       if(sortField === 'name'){
         if (a[sortField] < b[sortField]) {
           return -1 * multiplier;
@@ -23,7 +25,7 @@ export class SortPipe implements PipeTransform {
         } else {
           return 0;
         }
-      }else if(sortField === 'height' || sortField === 'weight'){
+      }else if(sortField === 'height' || sortField === 'weight'){ //sorting by height and width
         
             return (a.details[sortField] - b.details[sortField]) * multiplier ;
      }
